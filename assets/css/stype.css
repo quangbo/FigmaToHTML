@@ -5,6 +5,10 @@ html {
   /* Quy doi 1rem=10px */
   font-size: 62.5%;
 }
+:root {
+  --font-heading: "Sen", serif;
+  --primary-color: #ffb900;
+}
 .main-content {
   width: 1170px;
   margin-left: auto;
@@ -21,7 +25,10 @@ html {
   padding: 0 16px;
   line-height: 50px;
   min-width: 118px;
-  border-radius: 24.5px;
+  border-radius: 999px;
+}
+.btn:hover {
+  opacity: 0.8;
 }
 body {
   /* Khoi phuc co chu mac dinh trong phan body */
@@ -35,6 +42,7 @@ a {
   background: #fffcf4;
 }
 .header.fixed {
+  z-index: 1;
   position: sticky;
   top: -28px;
 }
@@ -52,7 +60,6 @@ a {
 .nav a {
   position: relative;
   font-size: 1.6rem;
-  line-height: 28px;
   color: #5f5b53;
   padding: 8px 21px;
 }
@@ -78,4 +85,141 @@ a {
 }
 .header .action {
   margin-left: 49px;
+}
+/* Phan Hero */
+.hero {
+  padding: 56px 0 65px;
+  background: #fffcf4;
+  /* position: relative; */
+}
+.hero .body {
+  display: flex;
+}
+.hero .media-block {
+  position: relative;
+  width: 48%;
+}
+.hero .media-block .img {
+  width: 470px;
+  height: 685px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.hero .hero-summary {
+  padding: 24px;
+  position: absolute;
+  bottom: 48px;
+  right: 0;
+  width: 270;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+.hero-summary .item {
+  align-items: center;
+  display: flex;
+}
+.hero-summary .item + .item {
+  margin-top: 22px;
+}
+.hero-summary .icon {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  background: #fff9e8;
+}
+.hero-summary .icon2 {
+  background: #fcefff;
+}
+.hero-summary .icon3 {
+  background: #ebeaff;
+}
+.hero-summary .info {
+  margin-left: 16px;
+}
+.hero-summary .lable {
+  color: #5f5b53;
+  font-size: 1.4rem;
+  line-height: 26px;
+}
+.hero-summary .title {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 167%;
+}
+
+/* Phan Hero right */
+
+.hero .content-block {
+  width: 52%;
+  padding-left: 130px;
+  padding-top: 64px;
+}
+.hero .heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 5.8rem;
+  line-height: 1.17;
+  letter-spacing: -2%;
+  color: #171100;
+}
+.hero .desc {
+  margin-top: 22px;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: #5f5b53;
+}
+.hero .cta-group {
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+}
+.hero-cta {
+  width: 180px;
+  line-height: 64px;
+  background-color: var(--primary-color);
+}
+.hero .watch-video {
+  display: flex;
+  border: none;
+  margin-left: 28px;
+  background-color: transparent;
+  align-items: center;
+  cursor: pointer;
+}
+.hero .watch-video .icon {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px #00000012;
+}
+.hero .watch-video span {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  margin-left: 14px;
+}
+.hero .desc-recent {
+  margin-top: 48px;
+}
+.hero .stats {
+  margin-top: 8px;
+}
+.hero .stats strong {
+  margin-right: 15px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 4.4rem;
+  line-height: 1.23;
+  color: #171100;
+}
+.hero .stats strong:nth-child(2) {
+  margin-left: 28px;
 }
